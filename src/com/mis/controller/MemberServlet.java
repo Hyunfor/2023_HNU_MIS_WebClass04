@@ -34,6 +34,10 @@ public class MemberServlet extends HttpServlet {
 		MemberBean member = new MemberBean();
 		member.setUserid("admin1234");
 		member.setName("관리자");
+		member.setEmail("naver@gmail.com");
+		member.setNickname("딴돈에 반만 가져가");
+		member.setPhone("010-112-119");
+		member.setUserpwd("1234");
 		
 		// 2 ) request 속성에 MemberBean 담기
 		request.setAttribute("member", member);

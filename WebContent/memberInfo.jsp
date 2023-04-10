@@ -8,6 +8,10 @@
 </head>
 <body>
 	아이디 : ${member.userid }<br>
+	비밀번호 : ${member.userpwd }<br>
 	이름 : ${member.name }<br>
+	별명 : ${member.nickname }<br>
+	이메일 : ${member.email }<br>
+	연락처 : ${member.phone }<br>
 </body>
 </html>
