@@ -9,6 +9,6 @@
 <body>
 	자바코드 <br>
 	== 연산자 사용 결과 : <%=request.getParameter("id") == "admin" %> <br>
-	equals 연산자 사용 결과 : <%=request.getParameter("id").equals("admin") %> <br>
+	equals 메소드 연산자 사용 결과 : <%=request.getParameter("id").equals("admin") %> <br>
 </body>
 </html>
