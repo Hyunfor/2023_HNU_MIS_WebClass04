@@ -11,3 +11,7 @@
   당신이 입력한 정보(EL 사용) <br>
   ${param.id} <br>
   ${param.pwd} <br>
+  
+  당신이 입력한 정보(EL 사용, [] 형태) <br>
+  ${param["id"]} <br>
+  ${param["pwd"]} <br>
