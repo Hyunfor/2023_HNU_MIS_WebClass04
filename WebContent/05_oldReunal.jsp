@@ -8,10 +8,19 @@
 </head>
 <body>
 	자바코드
-	<br> == 연산자 사용 결과 :
+	<br>
+	<%
+		if (request.getParameter("id") != null) {
+	%>
+	== 연산자 사용 결과 :
 	<%=request.getParameter("id") == "admin"%>
 	<br> equals 메소드 연산자 사용 결과 :
 	<%=request.getParameter("id").equals("admin")%>
 	<br>
+	<%
+		} else {
+	out.print("id값을 전달해 주세요.");
+		}
+	%>
 </body>
 </html>
