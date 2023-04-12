@@ -44,7 +44,7 @@ public class BoardServlet extends HttpServlet {
 		request.setAttribute("board", board);
 		
 		// 3 ) 페이지 이동
-		RequestDispatcher dispatcher = request.getRequestDispatcher("memberInfo.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("boardInfo.jsp");
 		dispatcher.forward(request, response);
 	}
 
