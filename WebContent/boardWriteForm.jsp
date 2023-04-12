@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h2>게시글 작성</h2>
-	<form action="boardinfo.jsp" method="post">
+	<form action="BoardServlet" method="post" >
 		<table>
 			<colgroup>
 				<col width="200" />

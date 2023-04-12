@@ -7,7 +7,7 @@
 <title>Board Info</title>
 </head>
 <body>
-	<h2>게시글 정보</h2>
+	<h2>게시글 입력 정보</h2>
 	<table>
 		<tr>
 			<th>작성자</th>

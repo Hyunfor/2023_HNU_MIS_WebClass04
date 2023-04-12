@@ -17,42 +17,49 @@ import com.mis.javabeans.BoardBean;
 @WebServlet("/BoardServlet")
 public class BoardServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public BoardServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// 1 ) BoardBean에 정보 담기
-		BoardBean board = new BoardBean();
-		board.setName("고니");
-		board.setUserpwd("1234");
-		board.setEmail("naver@gmail.com");
-		board.setTitle("딴돈에 반만 가져가");
-		board.setContent("010-112-119");
-		
-		
-		// 2 ) request 속성에 BoardBean 담기
-		request.setAttribute("board", board);
-		
-		// 3 ) 페이지 이동
-		RequestDispatcher dispatcher = request.getRequestDispatcher("boardWriteForm.jsp");
-		dispatcher.forward(request, response);
+	public BoardServlet() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		
+		response.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html; charset=UTF-8");
+		request.setCharacterEncoding("UTF-8");
+		
+		// 1 ) BoardBean에 정보 담기
+		BoardBean board = new BoardBean();
+		board.setName(request.getParameter("name"));
+		board.setUserpwd(request.getParameter("userpwd"));
+		board.setEmail(request.getParameter("email"));
+		board.setTitle(request.getParameter("title"));
+		board.setContent(request.getParameter("content"));
+
+		// 2 ) request 속성에 BoardBean 담기
+		request.setAttribute("board", board);
+
+		// 3 ) 페이지 이동
+		RequestDispatcher dispatcher = request.getRequestDispatcher("boardinfo.jsp");
+		dispatcher.forward(request, response);
 	}
 
 }
