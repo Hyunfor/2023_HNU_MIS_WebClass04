@@ -7,6 +7,10 @@
 <title>Board Info</title>
 </head>
 <body>
-
+	<table>
+		<colgroup>
+			<col width="200" />
+		</colgroup>
+	</table>
 </body>
 </html>
