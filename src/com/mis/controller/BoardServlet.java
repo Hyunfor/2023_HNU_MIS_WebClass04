@@ -10,12 +10,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.mis.javabeans.BoardBean;
-import com.mis.javabeans.MemberBean;
 
 /**
  * Servlet implementation class MemberServlet
  */
-@WebServlet("/MemberServlet")
+@WebServlet("/BoardServlet")
 public class BoardServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -31,7 +30,7 @@ public class BoardServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// 1 ) MemberBean에 정보 담기
+		// 1 ) BoardBean에 정보 담기
 		BoardBean board = new BoardBean();
 		board.setName("고니");
 		board.setUserpwd("1234");
@@ -40,11 +39,11 @@ public class BoardServlet extends HttpServlet {
 		board.setContent("010-112-119");
 		
 		
-		// 2 ) request 속성에 MemberBean 담기
+		// 2 ) request 속성에 BoardBean 담기
 		request.setAttribute("board", board);
 		
 		// 3 ) 페이지 이동
-		RequestDispatcher dispatcher = request.getRequestDispatcher("boardInfo.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("boardWriteForm.jsp");
 		dispatcher.forward(request, response);
 	}
 
