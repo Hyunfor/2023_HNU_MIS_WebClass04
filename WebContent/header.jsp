@@ -5,10 +5,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<!-- 커스텀 공통 CSS -->
-<link rel="stylesheet" href="board.css" type="text/css"/>
 </head>
 <body>
+게시글 과제입니다.
 --------------------------------------------------------------------------------------------------------------------------
 </body>
 </html>

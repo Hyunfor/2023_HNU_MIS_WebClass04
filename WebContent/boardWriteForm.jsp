@@ -10,7 +10,7 @@
 	<jsp:include page="header.jsp" />
 	<form action="BoardServlet" method="post">
 		<div class="table-box-type-1">
-			<table class="table ">
+			<table class="table">
 				<colgroup>
 					<col width="200" />
 				</colgroup>
@@ -43,12 +43,17 @@
 						<td><input class="input" type="text" name="content"
 							placeholder="내용을 입력해주세요." /> <script type="text/x-template"></script></td>
 					</tr>
+					<tr>
+						<th>
+							<td id="button" align="center">
+								<input type="submit" value="글 작성"> 
+								<input type="reset" value="다시 작성">
+							</td>
+						</th>
+					</tr>
 				</tbody>
 			</table>
-			<div id="button" align="center">
-				<input type="submit" value="글 작성"> <input type="reset"
-					value="다시 작성">
-			</div>
+
 		</div>
 	</form>
 	<jsp:include page="footer.jsp" />
